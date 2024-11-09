@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name= "description" content="Inozon Engineering (Pty) Ltd. is a recently launched mechanical engineering company specialising in precision machining and light fabrication. The company’s goal is to provide a quality service and precision machined products that make a real difference. Our director Innocent Masango, has a passion for working with steel and has 27 years’ experience working in mechanical engineering on conventional machines as well as CNC machines.">
+    <meta name="keywords" content="engineering, mechanical engineering, food processing, mining parts, gears, spur gears, helical gears, bevel gears, splines, keyways.">
+    <meta name="revisit" content="30 days.">
+    <meta http-equiv="refresh" content="30">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inozon Engineering | Contact Us Page</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav>
+        <a href = "index.html"><img src = "_images/logo.jpg" alt= "logo" class = "logo"></a>
+
+        <div class="menu">
+            
+                <ul>
+                    <li><a href = "index.html">Homepage</a></li>
+                    <li><a href = "about.html" > About</a></li>
+                    <li><a href = "products_services.html" > Products & Services</a></li>
+                    <li><a href = "gallery.html">Gallery</a></li>
+                    <li class = "current">Contact Us</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <br>
+    <main>
+        <hr><!--The line going along the page-->
+        <!--Icons were taken from https://iconscout.com/-->
+            <section class="motto">
+                <h1> Contact Information </h1>
+            </section>
+
+            <h1>Enquiry Form</h1>
+            <hr>
+                    <form action="mailto:sales@inozon.co.za" method="post" id="Enquiries" enctype="text/plain">
+                        <table>
+                            <tr>
+                                <td><lable for="name">Name</lable></td>
+                                <td><input type ="text" name ="name" id="name" value="Enter your name" onfocus="this.value=''"></td>
+                            </tr>
+                            <tr>
+                                <td><lable for="surname">Surname</lable></td>
+                                <td><input type ="text" name ="surname" id="surname" value="Enter your surname" onfocus="this.value=''"></td>
+                            </tr>
+                            <tr>
+                                <td><lable for="email">Email Address</lable></td>
+                                <td><input type ="email" name ="email" id="email" value="Enter email here, e.g may@gmail.com" onfocus="this.value=''"></td>
+                            </tr>
+                            <tr>
+                                <td><lable for="category">Enquiry category</lable></td>
+                                <td style="text-align: left;"><select name="category" id= "category">
+                                    <option value="0">Choose..</option>
+                                    <option value="1">Products</option>
+                                    <option value="2">Repairs</option>
+                                    <option value="3">Services</option>
+                                    <option value="4">General</option>
+                                </select> 
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <input type="reset" value="Clear">
+                                    <input type="submit" value="Submit" onclick="validateForm()">
+                                </td>
+                            </tr>
+                        </table>
+                    </form>
+                    <hr>
+
+                <p><img src = "_images/email.avif" height = "20"> <strong> Email : </strong> <a href = "mailto: innocent@inozon.co.za">innocent@inozon.co.za</a> or
+                    <a href = "mailto:sales@inozon.co.za">sales@inozon.co.za</a></p>
+                
+                <p><img src = "_images/phone.avif" height = "20"><strong>  Phone : </strong> +27 82 820 9546 or +27 72 707 4380</p>
+            
+                <p><img src = "_images/location.avif" height = "20"><strong>  Location : </strong> 17 Lincoln Rd Atlas Industrial Park Benoni. (Industrial Complex)</p>
+              
+                <p><img src = "_images/time.avif" height = "20"><strong> Trading Hours : </strong> Monday and Thursday 7.30am to 4pm. Friday 7.30am to 1.30pm</p>
+            
+                <h4>
+                    <div ><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7159.433487032445!2d28.294463202589306!3d-26.20589110799708!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e9517b368b396d1%3A0x8c17c088bb96dc42!2sTitan%20Specialist%20Welding!5e0!3m2!1sen!2sza!4v1680532033924!5m2!1sen!2sza" width="500" height="300" style="border:10;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                </h4>
+                </main> 
+
+    <footer>
+        <div id = "bottom">
+                <ul>
+                    <li><a href = "index.html">Homepage</a></li>
+                    <li><a href = "about.html" > About</a></li>
+                    <li><a href = "products_services.html" > Products & Services</a></li>
+                    <li><a href = "gallery.html">Gallery</a></li>
+                    <li class = "current">Contact Us</li>
+                </ul>
+        </div>
+
+        <div id="lasttab">
+            <p1>
+                <script>
+                    var theDate = new Date()
+                    document.write("&copy; InoZon Engineering (Pty) Ltd " + theDate.getFullYear())
+                    document.write(" | Modified ")
+                    var theModifiedDate=new Date(document.lastModified)
+                    document.write(theModifiedDate.toDateString())
+
+                </script>
+               <br>
+            </p1>
+        </div>
+
+    <script>
+        //below is the function that runs when Submit is clicked
+        function validateForm(){
+        //Check that someone has actually entered something besides the default message or nothing
+        var validateName = document.getElementById("name").value;
+        if (validateName == "Enter your name" || validateName == "")
+        {
+        alert("Please enter your name");
+        }
+        var validateSurname = document.getElementById("surname").value;
+        if (validateSurname == "Enter your surname" || validateSurname == "")
+        {
+        alert("Please enter your surname");
+        }
+        //Check that the email address includes a @ and . in it
+        var validateEmail = document.getElementById("email").value;
+        if (validateEmail.includes("@") && validateEmail.includes(".")){}
+        else{alert("Not a valid email format")}
+        }
+    </script>
+    
+</body>
+</html>
